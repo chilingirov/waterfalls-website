@@ -41,6 +41,7 @@ body {
    -ms-transform: translateZ(0);
    -o-transform: translateZ(0);
    transform: translateZ(0);*/
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 768px) {
@@ -122,10 +123,10 @@ body {
 
 .poster div[class*="layer-"] {
   position: absolute;
-  top: -30px;
-  left: -60px;
-  right: -60px;
-  bottom: -70px;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -153,6 +154,7 @@ body {
 
 .poster .layer-3 {
   background-image: url("../images/plane.png");
+  margin-top: 200px;
 }
 
 /*===================================================================================
@@ -176,7 +178,7 @@ body {
   font-family: "Roboto", sans-serif;
   padding-left: 5% !important;
   padding-right: 5% !important;
-  background-color: rgba(255, 255, 255, 0.5) !important;
+  background-color: rgb(255, 255, 255) !important;
   /*border-bottom: 1px solid rgba(255, 255, 255, 1)*/
   box-shadow: 0 5px 10px rgba(30, 30, 30, 0.3);
   -ms-box-shadow: 0 5px 10px rgba(30, 30, 30, 0.3);
@@ -232,36 +234,28 @@ a {
 
 =====================================================================================*/
 
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  width: 120%;
-  margin-left: 0px;
-}
-
 .titles {
-  width: 100%;
+  max-width: 30%;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  border-radius: 4px;
 }
-
+.see-the-wrapper {
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 3rem;
+  border-radius: 4px;
+}
 .see-the {
-  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   font-size: 18px;
-  padding: 5px 15px 5px 15px;
   letter-spacing: 15px;
   color: #202020;
+  font-weight: 600;
 }
 
 /*===================================================================================
@@ -281,12 +275,15 @@ a {
   position: relative;
   top: 0;
   background-color: white;
-  height: 800px;
+  padding: 2rem 0 3rem 0;
 }
 
 @media screen and (max-width: 768px) {
   .about {
     height: 1050px !important;
+  }
+  .titles {
+    width: 80%;
   }
 }
 
@@ -583,6 +580,7 @@ h3 {
 
 .portfolio-grid {
   padding-bottom: 3rem;
+  max-width: 1200px;
 }
 
 /*FOOTER*/
